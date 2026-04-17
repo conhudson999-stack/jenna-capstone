@@ -3,14 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Balance & Thrive</title>
+  <title>Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="index.html" class="site-title">Balance &amp; Thrive</a>
+    <a href="index.html" class="site-title">
+      <svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" aria-label="OT Logo">
+        <defs>
+          <clipPath id="cc"><circle cx="26" cy="26" r="25"/></clipPath>
+          <!-- Basketball: warm orange gradient with highlight -->
+          <radialGradient id="bg" cx="38%" cy="32%" r="62%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="#ff9940"/>
+            <stop offset="55%" stop-color="#e06010"/>
+            <stop offset="100%" stop-color="#983000"/>
+          </radialGradient>
+          <!-- Soccer: bright white to light gray -->
+          <radialGradient id="sg" cx="38%" cy="32%" r="62%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#cccccc"/>
+          </radialGradient>
+          <!-- Volleyball: cream-white with subtle blue tint -->
+          <radialGradient id="vg" cx="38%" cy="32%" r="62%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#c8ddf0"/>
+          </radialGradient>
+          <!-- Baseball: off-white leather -->
+          <radialGradient id="rg" cx="38%" cy="32%" r="62%" gradientUnits="objectBoundingBox">
+            <stop offset="0%" stop-color="#fffff4"/>
+            <stop offset="100%" stop-color="#ddd6c0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- Outer container -->
+        <circle cx="26" cy="26" r="25" fill="#162060"/>
+        <circle cx="26" cy="26" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+        <g clip-path="url(#cc)">
+
+          <!-- ── BASKETBALL (top-left, cx=13 cy=13 r=11) ── -->
+          <circle cx="13" cy="13" r="11" fill="url(#bg)"/>
+          <!-- Vertical seam -->
+          <line x1="13" y1="2" x2="13" y2="24" stroke="#4a1400" stroke-width="1.3"/>
+          <!-- Horizontal equatorial seams (double arc) -->
+          <path d="M 2,13 Q 7.5,10.5 13,10.5 Q 18.5,10.5 24,13" stroke="#4a1400" stroke-width="1.3" fill="none"/>
+          <path d="M 2,13 Q 7.5,15.5 13,15.5 Q 18.5,15.5 24,13" stroke="#4a1400" stroke-width="1.3" fill="none"/>
+          <!-- Curved side seams -->
+          <path d="M 8,2.5 Q 4,13 8,23.5" stroke="#4a1400" stroke-width="1.1" fill="none"/>
+          <path d="M 18,2.5 Q 22,13 18,23.5" stroke="#4a1400" stroke-width="1.1" fill="none"/>
+
+          <!-- ── SOCCER BALL (top-right, cx=39 cy=13 r=11) ── -->
+          <circle cx="39" cy="13" r="11" fill="url(#sg)"/>
+          <!-- Central black pentagon -->
+          <polygon points="39,9.5 41.5,11.2 40.6,14.0 37.4,14.0 36.5,11.2" fill="#111"/>
+          <!-- 5 outer black patches, evenly spaced -->
+          <polygon points="39,2.2 40.8,3.8 40.2,5.8 37.8,5.8 37.2,3.8" fill="#111"/>
+          <polygon points="45.8,8.2 47.5,10.5 46.2,12.5 44.4,12.2 43.8,10.0" fill="#111"/>
+          <polygon points="43.5,18.8 44.8,21.2 43.0,23.0 41.2,22.0 41.0,19.5" fill="#111"/>
+          <polygon points="34.5,18.8 35.0,21.2 33.0,23.0 31.2,22.0 31.5,19.5" fill="#111"/>
+          <polygon points="30.5,8.2 31.2,10.0 29.8,12.2 28.0,12.5 27.5,10.5" fill="#111"/>
+
+          <!-- ── VOLLEYBALL (bottom-left, cx=13 cy=39 r=11) ── -->
+          <circle cx="13" cy="39" r="11" fill="url(#vg)"/>
+          <!-- 3 curved seam bands in blue (classic volleyball look) -->
+          <path d="M 2,36 Q 13,31 24,36" stroke="#1255a0" stroke-width="1.5" fill="none"/>
+          <path d="M 2,42 Q 13,47 24,42" stroke="#1255a0" stroke-width="1.5" fill="none"/>
+          <path d="M 9,28.5 Q 6,39 9,49.5" stroke="#1255a0" stroke-width="1.5" fill="none"/>
+
+          <!-- ── BASEBALL (bottom-right, cx=39 cy=39 r=11) ── -->
+          <circle cx="39" cy="39" r="11" fill="url(#rg)"/>
+          <!-- Left stitch curve -->
+          <path d="M 33,33 C 36,37 36,41 33,45" stroke="#c01010" stroke-width="1.3" fill="none"/>
+          <!-- Right stitch curve -->
+          <path d="M 45,33 C 42,37 42,41 45,45" stroke="#c01010" stroke-width="1.3" fill="none"/>
+          <!-- Left stitch ticks -->
+          <line x1="33.0" y1="34.8" x2="35.5" y2="34.2" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="32.2" y1="37.2" x2="34.7" y2="37.2" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="32.2" y1="40.8" x2="34.7" y2="40.8" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="33.0" y1="43.2" x2="35.5" y2="43.8" stroke="#c01010" stroke-width="0.9"/>
+          <!-- Right stitch ticks -->
+          <line x1="45.0" y1="34.8" x2="42.5" y2="34.2" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="45.8" y1="37.2" x2="43.3" y2="37.2" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="45.8" y1="40.8" x2="43.3" y2="40.8" stroke="#c01010" stroke-width="0.9"/>
+          <line x1="45.0" y1="43.2" x2="42.5" y2="43.8" stroke="#c01010" stroke-width="0.9"/>
+
+        </g>
+
+        <!-- Center OT badge -->
+        <circle cx="26" cy="26" r="12" fill="#0C1244"/>
+        <circle cx="26" cy="26" r="12" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <text x="26" y="30.5" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="Outfit, sans-serif" letter-spacing="1">OT</text>
+      </svg>
+    </a>
     <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
       <span></span>
       <span></span>
@@ -19,43 +108,52 @@
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="time-management.html">Time Management</a>
-      <a href="sleep-hygiene.html">Sleep Hygiene</a>
+      <a href="sleep-hygiene.html">Sleep</a>
       <a href="nutrition.html">Nutrition</a>
       <a href="stress-management.html">Stress Management</a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <span class="label">For Collegiate Athletes</span>
-    <h1>Occupational Balance &amp; Wellness</h1>
-    <p class="subtitle">An evidence-based educational program helping collegiate athletes thrive on and off the field.</p>
-    <a href="#topics" class="btn-primary">Get Started</a>
+  <!-- Bento Hero Grid -->
+  <section class="bento-hero">
+    <div class="bento-grid">
+      <div class="bento-main">
+        <span class="bento-label">For Collegiate Athletes</span>
+        <h1>Occupational<br>Balance &amp;<br>Wellness</h1>
+        <p>An evidence-based educational program helping collegiate athletes thrive on and off the field.</p>
+        <a href="#topics" class="btn-primary">Explore the Program</a>
+        <div class="bento-main-circle bento-circle-1"></div>
+        <div class="bento-main-circle bento-circle-2"></div>
+      </div>
+    </div>
   </section>
 
   <!-- Topic Cards Section -->
   <section class="topics-section" id="topics">
-    <h2>Explore the Program</h2>
     <div class="topics-grid">
       <a href="time-management.html" class="topic-card">
-        <div class="icon">⏰</div>
+        <span class="topic-number">01</span>
         <h3>Time Management</h3>
         <p>Strategies for balancing athletics, academics, and self-care</p>
+        <span class="topic-arrow">&#8594;</span>
       </a>
       <a href="sleep-hygiene.html" class="topic-card">
-        <div class="icon">🌙</div>
+        <span class="topic-number">02</span>
         <h3>Sleep Hygiene</h3>
         <p>Evidence-based practices for better rest and recovery</p>
+        <span class="topic-arrow">&#8594;</span>
       </a>
       <a href="nutrition.html" class="topic-card">
-        <div class="icon">🥗</div>
+        <span class="topic-number">03</span>
         <h3>Nutrition Habits</h3>
         <p>Fueling your body for performance and well-being</p>
+        <span class="topic-arrow">&#8594;</span>
       </a>
       <a href="stress-management.html" class="topic-card">
-        <div class="icon">🧘</div>
+        <span class="topic-number">04</span>
         <h3>Stress Management</h3>
         <p>Mindfulness and resilience techniques for daily life</p>
+        <span class="topic-arrow">&#8594;</span>
       </a>
     </div>
   </section>
@@ -63,12 +161,18 @@
   <!-- About Section -->
   <section class="about-section">
     <h2>About This Program</h2>
-    <p>This educational program is grounded in occupational therapy principles, viewing daily activities as meaningful "occupations" that shape overall health and well-being. Designed specifically for collegiate athletes, it addresses the unique challenges of balancing competitive sport, academics, and personal life. Through evidence-based strategies across four key wellness areas, the program aims to improve perceived occupational balance and support holistic health — including mental health — for student-athletes.</p>
+    <p>The purpose of "An Occupational Balance and Wellness Program for Collegiate Athletes" is to promote the occupational balance, health, well-being, and mental health of collegiate athletes through educational intervention. The sessions focus on primary areas that can be impacted by the busy schedules of collegiate athletes. The topics included in this program are time management, sleep and rest, nutrition and hydration, and stress management/mindfulness.</p>
   </section>
+
+  <!-- OT Definition -->
+  <div class="ot-definition" style="margin: 48px auto 48px; max-width: 760px; padding: 28px 32px;">
+    <h2>Occupational Therapy</h2>
+    <p>Aims to promote health and quality of life in all individuals through meaningful "occupations", also known as the things you do every day and what you enjoy.</p>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
-    Balance &amp; Thrive — An Occupational Balance &amp; Wellness Educational Program<br>
+    An Occupational Balance &amp; Wellness Educational Program<br>
     Research conducted at Westminster College, New Wilmington, PA<br>
     Capstone Project, Doctor of Occupational Therapy
   </footer>
