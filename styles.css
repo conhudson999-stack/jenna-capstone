@@ -755,6 +755,65 @@ ul {
 }
 
 /* =============================================
+   REFERENCES PAGE
+   ============================================= */
+
+.references-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 48px;
+}
+
+.references-category {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+.references-category h2 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--soft-blue-bg);
+}
+
+.references-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.references-list li {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.references-list li:last-child {
+  margin-bottom: 0;
+}
+
+.references-list li a {
+  color: var(--light-blue-vivid);
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.references-list li a:hover {
+  color: var(--navy);
+}
+
+/* =============================================
    RESPONSIVE
    ============================================= */
 
